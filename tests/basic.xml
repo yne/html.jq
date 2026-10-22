@@ -1,0 +1,1 @@
+<!DOCTYPE xml> <xml lang="en"> <head> <meta charset="utf-8" /> <title>Basic Example</title> <link rel="stylesheet" /> </head> <body id="home"> <input type="text"/> <p>content</p> </body> </html>

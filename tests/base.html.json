@@ -1,0 +1,12 @@
+["html",{"lang":"en"},[
+	["head",{},[
+		["meta",{"charset":"utf-8"}],
+		["title",{},["Basic Example"]],
+		["link",{"rel":"stylesheet"}]
+	]],
+	["body",{"id":"home"},[
+		["input",{"type":"text"}],
+		["hr"],
+		["p",{},["content"]]
+	]]
+]]

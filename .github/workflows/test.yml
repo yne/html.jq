@@ -1,0 +1,33 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Suite (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-26.04 # jq1.8
+          - ubuntu-24.04 # jq1.7
+          # ubuntu-22.04 # jq1.6 => scan/2 is not defined
+
+    steps:
+      - name: Install jq
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y jq
+          jq --version
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - run: ./tests.sh
